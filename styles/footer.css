@@ -1,0 +1,34 @@
+footer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-around;
+    color: var(--preto);
+    align-items: center;
+    font-size: .9em;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+.footer__links a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer__links {
+        justify-content: center;
+        gap: 10em;
+    }
+}
+
+/* .footer__links ul {
+    display: inline-block;
+} */

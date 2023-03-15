@@ -1,0 +1,24 @@
+.como-funciona {
+    background-color: var(--branco);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.como-funciona__titulo {
+    font-size: 1.5em;
+}
+
+.como-funciona video {
+    max-width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .como-funciona {
+        padding: 5em;
+    }
+    .como-funciona video {
+        max-height: 90vh;
+    }
+}
