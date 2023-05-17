@@ -1,0 +1,35 @@
+.telaInicial {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 1;
+    height: 80vh;
+    /* background-image: url("../img/stock/formatura.png"); */
+    /* background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+
+    background: url(), linear-gradient(180deg, #6FE5FF 0%, rgba(0, 209, 255, 0) 61.46%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: var(--branco);
+    text-shadow: 0px 4px 23px rgba(0, 0, 0, 1);
+    font-size: 3em;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        height: 80vh;
+        font-size: 4em;
+    }
+}
