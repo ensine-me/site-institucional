@@ -1,6 +1,6 @@
-.quem-somos {
+.quemSomos {
     box-shadow: inset 0 0 0 1000px rgba(42, 209, 53, 0.75);
-    background-image: url("../img/stock/aula-online.jpg");
+    background-image: url("assets/img/stock/aula-online.jpg");
     background-size: 100% auto;
     background-position: center;
     padding: 1em;
@@ -10,18 +10,18 @@
     justify-content: center;
 }
 
-.quem-somos__titulo {
+.quemSomosTitulo, .subtitulo {
     font-size: 1.5em;
 }
 
 @media screen and (min-width: 1024px) {
-    .quem-somos {
+    .quemSomos {
         padding: 5em;
     }
-    .quem-somos__titulo {
+    .quemSomosTitulo {
         margin-bottom: .5em;
     }
-    .quem-somos__texto {
+    .quemSomosTexto {
         font-size: 1.7em;
     }
 }

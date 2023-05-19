@@ -1,11 +1,11 @@
-.como-funciona {
+.comoFunciona {
     background-color: var(--branco);
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.como-funciona__titulo {
+.comoFuncionaTitulo {
     font-size: 1.5em;
 }
 
@@ -15,7 +15,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .como-funciona {
+    .comoFunciona {
         padding: 5em;
     }
     .como-funciona video {
