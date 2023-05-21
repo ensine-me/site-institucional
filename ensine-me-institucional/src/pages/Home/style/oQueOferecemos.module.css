@@ -1,38 +1,38 @@
-.o-que-oferecemos {
+.oQueOferecemos {
     box-shadow: inset 0 0 0 1000px rgba(44, 219, 105, 0.75);
+    background-image: url("assets/img/stock/aula-particular.jpg");
     background-color: var(--verde);
-    background-image: url("../img/stock/aula-particular.jpg");
     background-size: 100% auto;
     background-position: center;
 }
 
-.o-que-oferecemos li {
+.oQueOferecemos li {
     list-style-type: disc;
 }
 
-.o-que-oferecemos__texto ul {
+.oQueOferecemosTexto ul {
     margin-left: 1em;
 }
 
-.o-que-oferecemos__texto h3 {
+.oQueOferecemosTexto h3 {
     font-size: 1.3em;
 }
 
-.o-que-oferecemos__texto {
+.oQueOferecemosTexto {
     margin-top: 1em;
 }
 
 @media screen and (min-width: 1024px) {
-    .o-que-oferecemos__textos-container {
+    .oQueOferecemosTextosContainer {
         display: flex;
     }
-    .o-que-oferecemos__texto h3 {
+    .oQueOferecemosTexto h3 {
         font-size: 1.8em;
     }
-    .o-que-oferecemos li {
+    .oQueOferecemos li {
         font-size: 1.5em;
     }
-    .o-que-oferecemos__texto ul {
+    .oQueOferecemosTexto ul {
         margin-left: 3em;
     }
 }

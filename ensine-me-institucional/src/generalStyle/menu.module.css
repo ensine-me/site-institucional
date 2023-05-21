@@ -1,11 +1,8 @@
 .menu {
     background-color: var(--branco);
-    height: 80px;
-    border-bottom: 1px solid black;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 999;
 }
 
 .menuLogoContainer {
@@ -13,13 +10,14 @@
     display: flex;
     color: var(--verde-logo);
     align-items: center;
+    padding-right: 10%;
 }
 
-.menu__logo-container > h2 {
+.menuLogoContainer > h2 {
     font-size: 2em;
 }
 
-.menuLgo {
+.menuLogo {
     max-height: 100%;
     width: 100%;
 }
@@ -57,16 +55,19 @@
     color: black;
 }
 
-.menu__hamburguer-opcoes > li {
+.menuHamburguerOpcoesLi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 1em;
-    border-bottom: 1px solid black;
+    list-style: none;
 }
 
-.menu__hamburguer-container-acessar {
+.menuHamburguerContainerAcessar {
     width: 100%;
 }
 
-.btnAcessar {
+.btnAcessar, .btnAcessarHamburguer{
     display: inline-block;
     background-color: var(--verde-logo);
     color: var(--branco);
@@ -74,38 +75,52 @@
     border-radius: 3px;
     position: relative;
     margin: 1em 0;
-    margin-left: 50%;
-    transform: translate(-50%);
-    padding: 1em;
+    padding: 0.5em;
     text-decoration: none;
 }
-
-#ipt-menu-hamburguer:checked ~ .menu__hamburguer-opcoes-container {
-    display: block;
+.btnAcessar {
+    display: none;
 }
 
+
+#ipt-menu-hamburguer:checked ~ .menuHamburguerOpcoesContainer {
+    display: block;
+}
 
 .menuOpcoesContainer {
     display: none;
     font-size: 1.3em;
 }
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 750px) {
     .menu {
-        justify-content: left;
+        align-items: center;
+        justify-content: center;
+        font-size: 70%;
     }
 
     .menuHamburguerContainer {
         display: none;
     }
 
-    .menu__opcoes-container {
-        padding-left: 1em;
-        width: 30em;
-        display: block;
-    }
-
-    .menu__opcoes {
+    .menuOpcoesContainer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menuOpcoes {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btnAcessar {
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 2%;
+        height: 30%;
     }
 }

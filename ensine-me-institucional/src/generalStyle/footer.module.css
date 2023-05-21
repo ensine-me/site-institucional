@@ -5,7 +5,7 @@ footer {
     gap: 1em;
 }
 
-.footer__links {
+.footerLinks {
     display: flex;
     justify-content: space-around;
     color: var(--preto);
@@ -13,22 +13,22 @@ footer {
     font-size: .9em;
 }
 
-.footer__copyright {
+.footerCopyright {
     text-align: center;
 }
 
-.footer__links a {
+.footerLinks a {
     color: var(--preto);
     text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__links {
+    .footerLinks {
         justify-content: center;
         gap: 10em;
     }
 }
 
-/* .footer__links ul {
+/* .footerLinks ul {
     display: inline-block;
 } */

@@ -9,7 +9,7 @@
     font-size: 1.5em;
 }
 
-.como-funciona video {
+.comoFunciona video {
     max-width: 90%;
     margin: auto;
 }
@@ -18,7 +18,7 @@
     .comoFunciona {
         padding: 5em;
     }
-    .como-funciona video {
+    .comoFunciona video {
         max-height: 90vh;
     }
 }
