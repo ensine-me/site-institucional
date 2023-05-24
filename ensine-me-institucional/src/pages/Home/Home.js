@@ -13,7 +13,8 @@ import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
 import depoimento2 from "assets/img/stock/depoimentos/v3_0866164.jpg"
 import depoimento3 from "assets/img/stock/depoimentos/v3_0946854.jpg"
 import depoimento4 from "assets/img/stock/depoimentos/v3_0752929.jpg"
-import comoFuncionaVideo from "assets/video/fluxoOperacao.mp4"
+
+// import comoFuncionaVideo from "assets/video/fluxoOperacao.mp4"
 
 import swiperScript from "./javaScript.js"
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -36,7 +37,10 @@ const Home = () => {
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
                         </ul>
                     </div>
+                    <div className={sMenu.buttons}>
                         <a href="../Home.js" className={sMenu.btnAcessar}>Acessar</a>
+                        <a href="./cadastro" className={sMenu.btnAcessar}>Cadastrar</a>
+                    </div>
                     <div className={sMenu.menuHamburguerContainer}>
                         <input type="checkbox" name="ipt-menu-hamburguer" id="ipt-menu-hamburguer" />
                         <label for="ipt-menu-hamburguer" className={sMenu.hamburguerContainerLabel}>
@@ -72,7 +76,7 @@ const Home = () => {
                 <h2 className={[sComoFunciona.comoFuncionaTitulo, styles.subtitulo].join(' ')}>
                     Como funciona
                 </h2>
-                <video src={comoFuncionaVideo} loop id="video-como-funciona" muted="muted"></video>
+                {/* <video src={comoFuncionaVideo} loop id="video-como-funciona" muted="muted"></video> */}
             </section>
 
             <section className={sOferecemos.oQueOferecemos}>
