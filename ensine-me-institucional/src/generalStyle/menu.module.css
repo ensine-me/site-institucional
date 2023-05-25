@@ -39,15 +39,7 @@
 }
 
 #ipt-menu-hamburguer {
-    display: none;
-}
-
-.menuHamburguerOpcoesContainer {
-    position: absolute;
-    right: .1em;
-    background-color: var(--cinza-claro);
-    border: 1px solid black;
-    display: none;
+    display: block;
 }
 
 .opcaoHamburguer {
@@ -82,9 +74,22 @@
     display: none;
 }
 
-
-#ipt-menu-hamburguer:checked ~ .menuHamburguerOpcoesContainer {
+.iptMenuHamburguer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: block;
+}
+
+#iptMenuHamburguer:checked ~ .menuHamburguerOpcoesContainer {
+    display: block;
+}
+
+.menuHamburguerOpcoesContainer {
+    position: absolute;
+    right: .1em;
+    background-color: var(--cinza-claro);
+    display: none;
 }
 
 .menuOpcoesContainer {
@@ -126,5 +131,9 @@
 
     .buttons {
         display: flex;
+    }
+
+    .iptMenuHamburguer {
+        display: none;
     }
 }

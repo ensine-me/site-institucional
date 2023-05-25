@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from "generalStyle/styles.module.css"
 import sComoFunciona from "./style/comoFunciona.module.css"
 import sMenu from "generalStyle/menu.module.css"
@@ -38,12 +39,20 @@ const Home = () => {
                         </ul>
                     </div>
                     <div className={sMenu.buttons}>
-                        <a href="../Home.js" className={sMenu.btnAcessar}>Acessar</a>
-                        <a href="./cadastro" className={sMenu.btnAcessar}>Cadastrar</a>
+                        <a href="../Home.js" className={sMenu.btnAcessar}>
+                            <Link to="./Login">
+                                Login
+                            </Link>
+                        </a>
+                        <a href="./cadastro" className={sMenu.btnAcessar}>
+                            <Link to="./cadastro">Cadastro</Link>
+                        </a>
                     </div>
-                    <div className={sMenu.menuHamburguerContainer}>
-                        <input type="checkbox" name="ipt-menu-hamburguer" id="ipt-menu-hamburguer" />
-                        <label for="ipt-menu-hamburguer" className={sMenu.hamburguerContainerLabel}>
+                    <div className={sMenu.iptMenuHamburguer}>
+                        <input type="checkbox" name="iptMenuHamburguer" id="iptMenuHamburguer" />
+                    </div>
+                    <div className={sMenu.menuHamburguerOpcoesContainer}>
+                        <label htmlFor="iptMenuHamburguer" className={sMenu.hamburguerContainerLabel}>
                             {/*<span className={sMenu.menuContainerImagemBurguer}></span>*/}
                         </label>
                         <div className={sMenu.menuContainerImagemBurguer}>
