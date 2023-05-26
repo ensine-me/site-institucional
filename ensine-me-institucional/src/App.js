@@ -1,5 +1,5 @@
-import Home from './pages/Home/Home';
-import Cadastro from './pages/cadastro/Cadastro'
+import Home from './pages/Home';
+import Cadastro from './pages/cadastro'
 
 import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
