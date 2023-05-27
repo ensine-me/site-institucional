@@ -31,20 +31,19 @@ const Home = () => {
                     </div>
                     <div className={sMenu.menu}>
                         <ul className={sMenu.menuOpcoesContainer}>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Home</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Quem somos</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>O que oferecemos</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Como funciona</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Sobre</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Proposta</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Funcionamento</a></li>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
                         </ul>
                     </div>
                     <div className={sMenu.buttons}>
-                        <a href="../Home.js" className={sMenu.btnAcessar}>
+                        <a href="./Login" className={sMenu.btnLogin}>
                             <Link to="./Login">
                                 Login
                             </Link>
                         </a>
-                        <a href="./cadastro" className={sMenu.btnAcessar}>
+                        <a href="./Cadastro" className={sMenu.btnCadastro}>
                             <Link to="./cadastro">Cadastro</Link>
                         </a>
                     </div>
@@ -63,7 +62,7 @@ const Home = () => {
                                 <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Como funciona</a></li>
                                 <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
                             </ul>
-                            <a href="../Home.js" className={sMenu.btnAcessarHamburguer}>Acessar</a>
+                            <a href="../Home.js" className={sMenu.btnLoginHamburguer}>Login</a>
                         </div>
                     </div>
                 </nav>
@@ -119,33 +118,37 @@ const Home = () => {
                 <div className={sDepoimentos.depoimentosContainer}>
                     <div class="Swiper">
                         <div className={sSwiper.swiperWrapper}>
-                            <div className={sDepoimentos.cardDepoimento}>
-                                <p className={sDepoimentos.depoimentoTexto}>Esta plataforma é incrível. Tive a oportunidade de mudar vidas das
-                                    pessoas que mais precisavam. Meu trabalho nunca foi tão gratificante antes.</p>
-                                <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Najila Vitoria</h3>
-                                <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Professora</h3>
-                                <img src={depoimento1} alt="" className={sDepoimentos.depoimentoImagem} />
+                            <div className={sDepoimentos.depoimentosBlock}>
+                                <div className={sDepoimentos.cardDepoimento}>
+                                    <p className={sDepoimentos.depoimentoTexto}>Esta plataforma é incrível. Tive a oportunidade de mudar vidas das
+                                        pessoas que mais precisavam. Meu trabalho nunca foi tão gratificante antes.</p>
+                                    <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Najila Vitoria</h3>
+                                    <img src={depoimento1} alt="" className={sDepoimentos.depoimentoImagem} />
+                                    <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Professora</h3>
+                                </div>
+                                <div className={sDepoimentos.cardDepoimento}>
+                                    <p className={sDepoimentos.depoimentoTexto}>Eu não me sentia preparado para o vestibular e não tinha dinheiro
+                                        para um cursinho. A ensine.me foi a única que me deu preparo para estar onde estou hoje</p>
+                                    <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Guilherme Henrique</h3>
+                                    <img src={depoimento2} alt="" className={sDepoimentos.depoimentoImagem} />
+                                    <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Aluno</h3>
+                                </div>
                             </div>
-                            <div className={sDepoimentos.cardDepoimento}>
-                                <p className={sDepoimentos.depoimentoTexto}>Eu não me sentia preparado para o vestibular e não tinha dinheiro
-                                    para um cursinho. A ensine.me foi a única que me deu preparo para estar onde estou hoje</p>
-                                <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Guilherme Henrique</h3>
-                                <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Aluno</h3>
-                                <img src={depoimento2} alt="" className={sDepoimentos.depoimentoImagem} />
-                            </div>
-                            <div className={sDepoimentos.cardDepoimento}>
-                                <p className={sDepoimentos.depoimentoTexto}>Encontrei alunos incríveis e pude fazer a diferença com um impacto
-                                    real em suas vidas</p>
-                                <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Maria Antonieta</h3>
-                                <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Professora</h3>
-                                <img src={depoimento3} alt="" className={sDepoimentos.depoimentoImagem} />
-                            </div>
-                            <div className={sDepoimentos.cardDepoimento}>
-                                <p className={sDepoimentos.depoimentoTexto}>Nunca achei que entraria em Medicina em uma Federal saindo de uma
-                                    escola pública. Foi essa a porta que a ensine.me abriu para mim</p>
-                                <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Arthur Oliveira</h3>
-                                <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Aluno</h3>
-                                <img src={depoimento4} alt="" className={sDepoimentos.depoimentoImagem} />
+                            <div className={sDepoimentos.depoimentosBlock}>
+                                <div className={sDepoimentos.cardDepoimento}>
+                                    <p className={sDepoimentos.depoimentoTexto}>Encontrei alunos incríveis e pude fazer a diferença com um impacto
+                                        real em suas vidas</p>
+                                    <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Maria Antonieta</h3>
+                                    <img src={depoimento3} alt="" className={sDepoimentos.depoimentoImagem} />
+                                    <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Professora</h3>
+                                </div>
+                                <div className={sDepoimentos.cardDepoimento}>
+                                    <p className={sDepoimentos.depoimentoTexto}>Nunca achei que entraria em Medicina em uma Federal saindo de uma
+                                        escola pública. Foi essa a porta que a ensine.me abriu para mim</p>
+                                    <h3 className={[sDepoimentos.depoimentoNome, sDepoimentos.depoimentoInfoAutor].join(' ')}>Arthur Oliveira</h3>
+                                    <img src={depoimento4} alt="" className={sDepoimentos.depoimentoImagem} />
+                                    <h3 className={[sDepoimentos.depoimentoCargo, sDepoimentos.depoimentoInfoAutor].join(' ')}>Aluno</h3>
+                                </div>
                             </div>
                         </div>
 
@@ -176,7 +179,7 @@ const Home = () => {
                     ensine.me ©️ 2023
                 </div>
             </footer>
-        </>  
+        </>
     )
 }
 
