@@ -9,35 +9,40 @@ import professorOption from '../../lotties/lottieProfessorOption.json';
 
 import sCadastro from "./style/cadastro.module.css"
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-
 const Cadastro = () => {
     return (
         <>
             <div className={sCadastro.page}>
                 <div className={sCadastro.card}>
-                    <div className={[sMenu.menuLogoContainer, sCadastro.menuLogoContainer].join(' ')}>
-                            <img src={logoSvg} alt="logotipo" className={sMenu.menuLogo} />
-                        <a href='./'>
+                    <div className={sCadastro.menuLogoContainer}>
+                        <img src={logoSvg} alt="logotipo" className={[sMenu.menuLogo, sCadastro.menuLogo].join(' ')} />
+                        <a href='../'>
                             <Link to="../">
                                 <h2>ensine.me</h2>
                             </Link>
                         </a>
                     </div>
                     <div className={sCadastro.options}>
-                        <div className={[sCadastro.option, sCadastro.optionProfessor].join(' ')}>
-                            <p>
-                                Quero ser professor
-                            </p>
-                            <Lottie animationData={professorOption} />
-                        </div>
-                        <div className={[sCadastro.option, sCadastro.optionAluno].join(' ')}>
-                            <p>
-                                Quero ser aluno
-                            </p>
-                            <Lottie animationData={alunoOption} />
-                        </div>
+                        <a href='./CadastroProfessor'>
+                            <Link to="./CadastroProfessor">
+                                <div className={[sCadastro.option, sCadastro.optionProfessor].join(' ')}>
+                                    <p>
+                                        Quero ser professor
+                                    </p>
+                                    <Lottie animationData={professorOption} />
+                                </div>
+                            </Link>
+                        </a>
+                        <a href='./alunocad'>
+                            <Link to="./alunocad">
+                                <div className={[sCadastro.option, sCadastro.optionAluno].join(' ')}>
+                                    <p>
+                                        Quero ser aluno
+                                    </p>
+                                    <Lottie animationData={alunoOption} />
+                                </div>
+                            </Link>
+                        </a>
                     </div>
                     <div className={sCadastro.formulario}>
                         <p>

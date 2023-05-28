@@ -38,7 +38,7 @@ const Home = () => {
                         </ul>
                     </div>
                     <div className={sMenu.buttons}>
-                        <a href="./Login" className={sMenu.btnLogin}>
+                        <a href="./login" className={sMenu.btnLogin}>
                             <Link to="./Login">
                                 Login
                             </Link>
