@@ -3,7 +3,10 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0.2px 0.2px 5px;
+}
+
+.menu a:hover  {
+    color: var(--verde-claro);
 }
 
 .menuLogoContainer {
@@ -75,6 +78,15 @@
 
 .buttons {
     display: none;
+    color: var(--preto);
+}
+
+.buttons a:hover {
+    color: var(--preto);
+}
+
+.btnCadastro:hover, .btnLogin:hover {
+    box-shadow: var(--shadow);
 }
 
 .btnCadastro {

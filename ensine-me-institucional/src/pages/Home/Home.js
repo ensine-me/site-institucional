@@ -7,6 +7,7 @@ import sOferecemos from "./style/oQueOferecemos.module.css"
 import sDepoimentos from "./style/depoimentos.module.css"
 import sSwiper from "./style/swiper.module.css"
 import sFooter from "generalStyle/footer.module.css"
+import ReactPlayer from './Player.js'
 
 import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
 
@@ -14,8 +15,6 @@ import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
 import depoimento2 from "assets/img/stock/depoimentos/v3_0866164.jpg"
 import depoimento3 from "assets/img/stock/depoimentos/v3_0946854.jpg"
 import depoimento4 from "assets/img/stock/depoimentos/v3_0752929.jpg"
-
-// import comoFuncionaVideo from "assets/video/fluxoOperacao.mp4"
 
 import swiperScript from "./javaScript.js"
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -27,14 +26,14 @@ const Home = () => {
                 <nav className={sMenu.menu}>
                     <div className={sMenu.menuLogoContainer}>
                         <img src={logoSvg} alt="logotipo" className={sMenu.menuLogo} />
-                        <h2>ensine.me</h2>
+                        <h2>Ensine.me</h2>
                     </div>
                     <div className={sMenu.menu}>
                         <ul className={sMenu.menuOpcoesContainer}>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Sobre</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Proposta</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Funcionamento</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="#quem-somos" className={sMenu.opcaoHamburguer}>Sobre</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="#como-funciona" className={sMenu.opcaoHamburguer}>Proposta</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="#o-que-oferecemos" className={sMenu.opcaoHamburguer}>Funcionamento</a></li>
+                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="#depoimentos" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
                         </ul>
                     </div>
                     <div className={sMenu.buttons}>
@@ -71,7 +70,7 @@ const Home = () => {
                     <h1 className="headerh1">Educação de qualidade a todos</h1>
                 </header>
             </div>
-            <section className={sQuemSomos.quemSomos}>
+            <section id='quem-somos' className={sQuemSomos.quemSomos}>
                 <h2 className={[sQuemSomos.quemSomosTitulo, styles.subtitulo].join(' ')}>Quem Somos</h2>
                 <p className={sQuemSomos.quemSomosTexto}>A Ensine.me é uma organização sem fins lucrativos que leva aulas particulares ou em
                     grupo para alunos do ensino médio de baixa renda</p>
@@ -80,14 +79,16 @@ const Home = () => {
                     vestibular</p>
             </section>
 
-            <section className={sComoFunciona.comoFunciona}>
+            <section id='como-funciona' className={sComoFunciona.comoFunciona}>
                 <h2 className={[sComoFunciona.comoFuncionaTitulo, styles.subtitulo].join(' ')}>
                     Como funciona
                 </h2>
-                {/* <video src={comoFuncionaVideo} loop id="video-como-funciona" muted="muted"></video> */}
+                <div className={sComoFunciona.video}>
+                    <ReactPlayer />
+                </div>
             </section>
 
-            <section className={sOferecemos.oQueOferecemos}>
+            <section id='o-que-oferecemos' className={sOferecemos.oQueOferecemos}>
                 <h2 className={[sOferecemos.oQueOferecemos, styles.subtitulo]}>
                     O que oferecemos
                 </h2>
@@ -111,7 +112,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className={sDepoimentos.depoimentosContainer}>
+            <section id='depoimentos' className={sDepoimentos.depoimentosContainer}>
                 <h2 className={sDepoimentos.depoimentos}>
                     Depoimentos
                 </h2>

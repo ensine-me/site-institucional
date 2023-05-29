@@ -17,7 +17,7 @@ const Cadastro = () => {
                     <div className={sCadastro.menuLogoContainer}>
                         <img src={logoSvg} alt="logotipo" className={[sMenu.menuLogo, sCadastro.menuLogo].join(' ')} />
                         <Link to="../">
-                            <h2>ensine.me</h2>
+                            <h2>Ensine.me</h2>
                         </Link>
                     </div>
                     <div className={sCadastro.options}>
