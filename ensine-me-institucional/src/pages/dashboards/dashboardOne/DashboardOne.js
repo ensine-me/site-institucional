@@ -33,12 +33,12 @@ const DashOne = () => {
                             <h2>Ensine.me</h2>
                         </Link>
                     </div>
-                    <ul className="">
-                        <li className="">Perfil</li>
-                        <li className="">Minhas Aulas</li>
-                        <li className="">Agenda</li>
-                        <li className="">Finanças</li>
-                        <li className="">Analises</li>
+                    <ul className="ulMenuDashOne">
+                        <li className="liMenuDashOne">Perfil</li>
+                        <li className="liMenuDashOne">Minhas Aulas</li>
+                        <li className="liMenuDashOne">Agenda</li>
+                        <li className="liMenuDashOne">Finanças</li>
+                        <li className="liMenuDashOne">Analises</li>
                     </ul>
                 </div>
                 <div className={styles.apresentacaoPerfil}>

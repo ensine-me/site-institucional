@@ -68,7 +68,8 @@ a:hover {
 }
 
 .option:hover {
-    background-color: var(--preto-claro);
+    background-color: var(--verde-claro);
+    width: 50%;
 }
 
 .option p {
