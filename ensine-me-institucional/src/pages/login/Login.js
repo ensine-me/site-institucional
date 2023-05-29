@@ -1,4 +1,9 @@
+import { Link } from '../../../node_modules/react-router-dom/dist/index';
 import styles from './style/Login.module.css'
+import googleLogo from 'assets/img/icons/googleLogo.png'
+import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
+import sMenu from "generalStyle/menu.module.css"
+
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
@@ -7,6 +12,12 @@ const Login = () => {
         <>
             <div className={styles.page}>
                 <div className={styles.card}>
+                    <div className={styles.menuLogoContainer}>
+                        <img src={logoSvg} alt="logotipo" className={styles.menuLogo} />
+                        <Link to="../">
+                            <h2>Ensine.me</h2>
+                        </Link>
+                    </div>
                     <div className={styles.formulario}>
                         <div className={styles.titleLabel}>
                             Email
@@ -19,20 +30,29 @@ const Login = () => {
                         <input className={styles.input} placeholder='*******' type='text'>
                         </input>
                     </div>
-                    <div className={styles.google}>
-                        <div className={styles.button} onClick="">
-                            Login
-                        </div>
-                        <div className={styles.button} onClick="">
-                            Login com o google
-                        </div>
+                    <div className={styles.buttons}>
+                        <Link to="../dashboardOne">
+                            <div className={styles.button}>
+                                Login
+                            </div>
+                        </Link>
+                        <Link to="../dashboardOne">
+                            <div className={styles.googleButtonContainer}>
+                                <div className={styles.googleButton}>
+                                    <img src={googleLogo}></img>
+                                    Login com google
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div className={styles.titleLabel2}>
                         Ainda não tem conta?
                     </div>
-                    <div className={styles.titleLabel3}>
-                        Cadastre-se 
-                    </div>
+                    <Link to="../cadastro">
+                        <div className={styles.titleLabel3}>
+                            Cadastre-se
+                        </div>
+                    </Link>
                 </div>
             </div>
         </>
