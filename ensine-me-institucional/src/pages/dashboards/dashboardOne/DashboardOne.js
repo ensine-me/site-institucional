@@ -8,88 +8,57 @@ import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
 //<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 //<div className={sMenu.menu}>
 
-
+/*
+ <div className={styles.cards}>
+                        <div className={styles.card}>
+                            a
+                        </div>
+                        <div className={styles.card}>
+                            a
+                        </div>
+                        <div className={styles.card}>
+                            a
+                        </div>
+                    </div>
+*/
 
 const DashOne = () => {
     return (
         <>
-            <nav className={sMenu.menu}>
-                <div className={sMenu.menuLogoContainer}>
-                    <img src={logoSvg} alt="logotipo" className={sMenu.menuLogo} />
-                    <h2>ensine.me</h2>
-                </div>
-                <div className="">
-                    <ul className={sMenu.menuOpcoesContainer}>
-                        <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Home</a></li>
-                        <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Quem somos</a></li>
-                        <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>O que oferecemos</a></li>
-                        <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Como funciona</a></li>
-                        <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
+            <div className={styles.page}>
+                <div className={styles.menu}>
+                    <div className={styles.menuLogoContainer}>
+                        <img src={logoSvg} alt="logotipo" className={styles.menuLogo} />
+                        <Link to="../">
+                            <h2>Ensine.me</h2>
+                        </Link>
+                    </div>
+                    <ul className="">
+                        <li className="">Perfil</li>
+                        <li className="">Minhas Aulas</li>
+                        <li className="">Agenda</li>
+                        <li className="">Finanças</li>
+                        <li className="">Analises</li>
                     </ul>
                 </div>
-                <div className={sMenu.buttons}>
-                    <a href="../Home.js" className={sMenu.btnAcessar}>
-                        <Link to="./Login">
-                            Login
-                        </Link>
-                    </a>
-                    <a href="./cadastro" className={sMenu.btnAcessar}>
-                        <Link to="./cadastro">Cadastro</Link>
-                    </a>
-                </div>
-                <div className={sMenu.iptMenuHamburguer}>
-                    <input type="checkbox" name="iptMenuHamburguer" id="iptMenuHamburguer" />
-                </div>
-                <div className={sMenu.menuHamburguerOpcoesContainer}>
-                    <label htmlFor="iptMenuHamburguer" className={sMenu.hamburguerContainerLabel}>
-                        {/*<span className={sMenu.menuContainerImagemBurguer}></span>*/}
-                    </label>
-                    <div className={sMenu.menuContainerImagemBurguer}>
-                        <ul className={sMenu.menuHamburguerOpcoes}>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Home</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Quem somos</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>O que oferecemos</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Como funciona</a></li>
-                            <li className={sMenu.menuHamburguerOpcoesLi}><a href="../Home.js" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
+                <div className={styles.apresentacaoPerfil}>
+                    <div className={styles.cardPerfil}>
+                        <h1 className={styles.h1Perfil}>Perfil</h1>
+                        <div className={styles.fotoPerfil}>
+                        </div>
+                        <ul className="">
+                            <li className="">Nome</li>
+                            <li className="">Contato</li>
+                            <li className="">Email</li>
+                            <li className="">Linkedin</li>
+                            <li className="">Telefone</li>
                         </ul>
-                        <a href="../Home.js" className={sMenu.btnAcessarHamburguer}>Acessar</a>
                     </div>
-                </div>
-            </nav>
-
-
-
-
-
-            <div className={styles.page}>
-                <div className={styles.cards1}>
-                    <div className={styles.card}>
-                        a
+                    <div className={styles.cardDescricao}>
+                        <h1 className={styles.h1Descricao}>Descrição</h1>
+                        <h4> </h4>
                     </div>
-                    <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div>
-                </div>
 
-                <div className={styles.cards2}>
-                    <div className={styles.card}>
-                        a
-                    </div>
-                    <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div> <div className={styles.card}>
-                        a
-                    </div>
                 </div>
             </div>
         </>

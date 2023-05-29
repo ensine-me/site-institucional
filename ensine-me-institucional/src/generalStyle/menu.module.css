@@ -3,10 +3,13 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
 }
 
 .menu a:hover  {
     color: var(--verde-claro);
+=======
+>>>>>>> fc4e7e908641f22efd5f652d4df0ca967c81e0b2
 }
 
 .menuLogoContainer {
