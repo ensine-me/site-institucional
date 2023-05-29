@@ -1,40 +1,57 @@
+import { React } from 'react';
+import { Link } from 'react-router-dom';
 
+import sAlunocad from './style/alunocad.module.css';
+import sCadastro from "../style/cadastro.module.css"
+import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
+import sMenu from "generalStyle/menu.module.css"
+
+import googleLogo from 'assets/img/icons/googleLogo.png'
 
 const Alunocad = () => {
     return (
         <>
-        <title>Simple form registration</title>
-            <div class="main-block">
-                <h1>Registration</h1>
-                <form action="/">
-                    <div class="account-type">
-                        <input type="radio" value="none" id="radioOne" name="account" checked />
-                        <label for="radioOne" class="radio">Personal</label>
-                        <input type="radio" value="none" id="radioTwo" name="account" />
-                        <label for="radioTwo" class="radio">Company</label>
+            <div className={sAlunocad.page}>
+                <div className={sAlunocad.card}>
+                    <div className={[sCadastro.menuLogoContainer, sAlunocad.me].join(' ')}>
+                        <img src={logoSvg} alt="logotipo" className={[sMenu.menuLogo, sCadastro.menuLogo].join(' ')} />
+                        <Link to="../">
+                            <h2>ensine.me</h2>
+                        </Link>
                     </div>
-
-                    <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-                    <input type="text" name="name" id="name" placeholder="Email" required />
-                    <label id="icon" for="name"><i class="fas fa-user"></i></label>
-                    <input type="text" name="name" id="name" placeholder="Name" required />
-                    <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-
-                    <div class="gender">
-                        <input type="radio" value="none" id="male" name="gender" checked />
-                        <label for="male" class="radio">Male</label>
-                        <input type="radio" value="none" id="female" name="gender" />
-                        <label for="female" class="radio">Female</label>
+                    <div className={sAlunocad.formulario}>
+                        <div className={sAlunocad.titleLabel}>
+                            Email
+                        </div>
+                        <input className={sAlunocad.input} placeholder='email@email.com' type='text'>
+                        </input>
+                        <div className={sAlunocad.titleLabel1}>
+                            Senha
+                        </div>
+                        <input className={sAlunocad.input} placeholder='*******' type='text'>
+                        </input>
                     </div>
-
-                    <div class="btn-block">
-                        <p>By clicking Register, you agree on our <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs</a>.</p>
-                        <button type="submit" href="/">Submit</button>
+                    <div className={sAlunocad.buttons}>
+                        <div className={sAlunocad.button} onClick="">
+                            Cadastrar
+                        </div>
+                        <div className={sAlunocad.googleButtonContainer} onClick="">
+                            <div className={sAlunocad.googleButton}>
+                                <img src={googleLogo}></img>
+                                Cadastrar com o google
+                            </div>
+                        </div>
                     </div>
-                </form>
+                    <div className={sAlunocad.titleLabel2}>
+                        Ainda não tem conta?
+                    </div>
+                    <div className={sAlunocad.titleLabel3}>
+                        Cadastre-se
+                    </div>
+                </div>
             </div>
         </>
     )
 }
 
-export default alunocad
+export default Alunocad

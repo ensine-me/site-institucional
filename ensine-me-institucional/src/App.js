@@ -3,7 +3,8 @@ import animationData from './lotties/lottieAlunoOption.json'
 
 import Home from './pages/Home';
 import Cadastro from './pages/cadastro'
-import Login from 'pages/login/Login';
+import CadastroAluno from 'pages/cadastro/alunocad/'
+import Login from 'pages/login';
 import DashOne from 'pages/dashboards/dashboardOne/DashboardOne';
 
 import React from "react";
@@ -31,6 +32,7 @@ const App = () => {
             <Route>
               <Route path="/" exact element={<Home />} />
               <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/cadastro/alunocad" element={<CadastroAluno />}/>
               <Route path="/login" element={<Login />} />
               <Route path="/dashboardOne" element={<DashOne />} />
             </Route>
