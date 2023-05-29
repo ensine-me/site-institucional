@@ -19,13 +19,15 @@
 
 :root {
     --cinza-claro: #D9D9D9;
-    --branco: #ffffff;
+    --branco: #f8f8f8;
     --verde-logo: #31C48D;
     --azul: #2AB2D1;
     --azul-claro: #2CDBCD;
     --verde-claro: #2cdb69;
     --verde: #2ad135;
-    --preto: #000000;
+    --preto: #1f1f1fe5;
+    --preto-claro: #4d4d4de5;
+    --verde-claro-opaco: #2cdb6941; 
 }
 
 body {

@@ -54,25 +54,39 @@
     justify-content: space-between;
     padding: 1em;
     list-style: none;
+    font-size: 1.2em;
 }
 
-.menuHamburguerContainerAcessar {
+.menuHamburguerContainerLogin {
     width: 100%;
 }
 
-.btnAcessar, .btnAcessarHamburguer{
+.btnLogin, .btnLoginHamburguer{
     display: inline-block;
     background-color: var(--verde-logo);
     color: var(--branco);
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     position: relative;
     margin: 1em 0;
     padding: 0.5em;
     text-decoration: none;
 }
-.btnAcessar {
+
+.buttons {
     display: none;
+}
+
+.btnCadastro {
+    display: inline-block;
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    margin: 1em 0;
+    padding: 0.5em;
+    text-decoration: none;
 }
 
 .iptMenuHamburguer {
@@ -122,7 +136,7 @@
         justify-content: space-between;
     }
 
-    .btnAcessar {
+    .btnLogin {
         display: flex;
         align-items: center;
         margin-left: 5%;
@@ -132,6 +146,14 @@
 
     .buttons {
         display: flex;
+        justify-content: space-evenly;
+        width: 20%;
+    }
+
+    .buttons a {
+        color: var(--preto);
+        text-decoration: none;
+        font-size: 120%;
     }
 
     .iptMenuHamburguer {
