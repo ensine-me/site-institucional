@@ -71,12 +71,14 @@ const Home = () => {
                 </header>
             </div>
             <section id='quem-somos' className={sQuemSomos.quemSomos}>
+                <div className={sQuemSomos.quemSomosContainer}>
                 <h2 className={[sQuemSomos.quemSomosTitulo, styles.subtitulo].join(' ')}>Quem Somos</h2>
                 <p className={sQuemSomos.quemSomosTexto}>A Ensine.me é uma organização sem fins lucrativos que leva aulas particulares ou em
                     grupo para alunos do ensino médio de baixa renda</p>
                 <p className={sQuemSomos.quemSomosTexto}>Nós conectamos professores que querem fazer a diferença com alunos que querem
                     aprender, levando educação de forma gratuita e preparando jovens de quaisquer condições econômicas para o
                     vestibular</p>
+                </div>
             </section>
 
             <section id='como-funciona' className={sComoFunciona.comoFunciona}>
@@ -89,6 +91,7 @@ const Home = () => {
             </section>
 
             <section id='o-que-oferecemos' className={sOferecemos.oQueOferecemos}>
+                <div className={sOferecemos.oQueOferecemosContainer}>
                 <h2 className={[sOferecemos.oQueOferecemos, styles.subtitulo]}>
                     O que oferecemos
                 </h2>
@@ -101,7 +104,7 @@ const Home = () => {
                             <li>Variedade de professores e disciplinas</li>
                         </ul>
                     </div>
-                    <div className={sOferecemos.QueOferecemosTexto}>
+                    <div className={sOferecemos.oQueOferecemosTexto}>
                         <h3>Para o professor</h3>
                         <ul>
                             <li>Chance de impactar a vida de quem mais precisa</li>
@@ -109,6 +112,7 @@ const Home = () => {
                             <li>Certificado de aulas complementares</li>
                         </ul>
                     </div>
+                </div>
                 </div>
             </section>
 

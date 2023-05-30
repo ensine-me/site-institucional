@@ -21,7 +21,7 @@ const Cadastro = () => {
                         </Link>
                     </div>
                     <div className={sCadastro.options}>
-                        <Link to="./CadastroProfessor">
+                        <Link to="/cadastro/professorcad">
                             <div className={[sCadastro.option, sCadastro.optionProfessor].join(' ')}>
                                 <p>
                                     Quero ser professor

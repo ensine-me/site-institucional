@@ -8,7 +8,7 @@ import sMenu from "generalStyle/menu.module.css"
 
 import googleLogo from 'assets/img/icons/googleLogo.png'
 
-const Alunocad = () => {
+const Professorcad = () => {
     return (
         <>
             <div className={sUsuariocad.page}>
@@ -21,7 +21,7 @@ const Alunocad = () => {
                     </div>
                     <div className={sUsuariocad.formulario}>
                         <p>
-                            Cadastro de aluno
+                            Cadastro de professor
                         </p>
                         <div className={sUsuariocad.titleLabel}>
                             <div className={sUsuariocad.inputNames}>
@@ -71,4 +71,4 @@ const Alunocad = () => {
     )
 }
 
-export default Alunocad
+export default Professorcad
