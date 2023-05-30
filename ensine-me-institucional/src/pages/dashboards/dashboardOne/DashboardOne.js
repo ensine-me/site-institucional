@@ -34,24 +34,25 @@ const DashOne = () => {
                         </Link>
                     </div>
                     <ul className="ulMenuDashOne">
-                        <li className="liMenuDashOne">Perfil</li>
-                        <li className="liMenuDashOne">Minhas Aulas</li>
-                        <li className="liMenuDashOne">Agenda</li>
-                        <li className="liMenuDashOne">Finanças</li>
-                        <li className="liMenuDashOne">Analises</li>
+                        <li className={styles.liMenuDashOne}>Perfil</li>
+                        <li className={styles.liMenuDashOne}>Minhas Aulas</li>
+                        <li className={styles.liMenuDashOne}>Agenda</li>
+                        <li className={styles.liMenuDashOne}>Finanças</li>
+                        <li className={styles.liMenuDashOne}>Analises</li>
                     </ul>
                 </div>
                 <div className={styles.apresentacaoPerfil}>
                     <div className={styles.cardPerfil}>
                         <h1 className={styles.h1Perfil}>Perfil</h1>
                         <div className={styles.fotoPerfil}>
+                            
                         </div>
                         <ul className="">
-                            <li className="">Nome</li>
-                            <li className="">Contato</li>
-                            <li className="">Email</li>
-                            <li className="">Linkedin</li>
-                            <li className="">Telefone</li>
+                            <li className={styles.liMenuDashOne}>Nome</li>
+                            <li className={styles.liMenuDashOne}>Contato</li>
+                            <li className={styles.liMenuDashOne}>Email</li>
+                            <li className={styles.liMenuDashOne}>Linkedin</li>
+                            <li className={styles.liMenuDashOne}>Telefone</li>
                         </ul>
                     </div>
                     <div className={styles.cardDescricao}>
