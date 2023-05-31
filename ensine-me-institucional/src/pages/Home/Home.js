@@ -9,7 +9,7 @@ import sSwiper from "./style/swiper.module.css"
 import sFooter from "generalStyle/footer.module.css"
 import ReactPlayer from './Player.js'
 
-import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
+import Logo from '../.././components/atoms/logo/logo.jsx'
 
 import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
 import depoimento2 from "assets/img/stock/depoimentos/v3_0866164.jpg"
@@ -24,10 +24,7 @@ const Home = () => {
         <>
             <div className={styles.telaInicial}>
                 <nav className={sMenu.menu}>
-                    <div className={sMenu.menuLogoContainer}>
-                        <img src={logoSvg} alt="logotipo" className={sMenu.menuLogo} />
-                        <h2>Ensine.me</h2>
-                    </div>
+                    <Logo/>
                     <div className={sMenu.menu}>
                         <ul className={sMenu.menuOpcoesContainer}>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="#quem-somos" className={sMenu.opcaoHamburguer}>Sobre</a></li>

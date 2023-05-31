@@ -16,19 +16,6 @@
     background-color: var(--branco);
 }
 
-a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--verde-claro);
-    text-decoration: none;
-    transition: 300ms;
-}
-
-a:hover {
-    color: var(--branco);
-}
-
 .logoContainer {
     display: flex;
     justify-content: center;

@@ -9,23 +9,6 @@
     color: var(--verde-claro);
 }
 
-.menuLogoContainer {
-    height: 100%;
-    display: flex;
-    color: var(--verde-logo);
-    align-items: center;
-    padding-right: 10%;
-}
-
-.menuLogoContainer > h2 {
-    font-size: 2em;
-}
-
-.menuLogo {
-    max-height: 100%;
-    width: 100%;
-}
-
 .hamburguerContainerLabel {
     position: relative;
     display: inline-block;

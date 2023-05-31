@@ -1,0 +1,22 @@
+.logoContainer {
+    height: 100%;
+    display: flex;
+    color: var(--preto);
+    align-items: center;
+    padding-right: 10%;
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde-claro);
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.a:hover {
+    color: var(--branco);
+}
+
+
