@@ -1,0 +1,13 @@
+.ulContainer {
+    display: none;
+    font-size: 2em;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    list-style: none;
+    font-size: 1.2em;
+}

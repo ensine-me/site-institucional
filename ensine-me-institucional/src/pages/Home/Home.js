@@ -26,14 +26,15 @@ const Home = () => {
                 <nav className={sMenu.menu}>
                     <Logo/>
                     <div className={sMenu.menu}>
+                        const items = []
                         <ul className={sMenu.menuOpcoesContainer}>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="#quem-somos" className={sMenu.opcaoHamburguer}>Sobre</a></li>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="#como-funciona" className={sMenu.opcaoHamburguer}>Proposta</a></li>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="#o-que-oferecemos" className={sMenu.opcaoHamburguer}>Funcionamento</a></li>
                             <li className={sMenu.menuHamburguerOpcoesLi}><a href="#depoimentos" className={sMenu.opcaoHamburguer}>Depoimentos</a></li>
                         </ul>
-                    </div>
                     <div className={sMenu.buttons}>
+                    </div>
                         <a href="./login" className={sMenu.btnLogin}>
                             <Link to="./Login">
                                 Login

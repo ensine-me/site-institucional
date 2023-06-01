@@ -1,22 +1,27 @@
 .logoContainer {
-    height: 100%;
     display: flex;
-    color: var(--preto);
+    flex-direction: row;
     align-items: center;
-    padding-right: 10%;
+    justify-content: center;
 }
 
-.a {
+.linkHome {
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--verde-claro);
     text-decoration: none;
-    transition: 300ms;
 }
 
-.a:hover {
-    color: var(--branco);
+.linkHome a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.linkHome :hover {
+    color: var(--preto);
 }
 
 

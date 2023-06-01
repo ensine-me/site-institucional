@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import sGreenTitle from './greenTitle.module.css'
 
-const GreenTitle = ({ texto }) => {
-    return <h2 className={sGreenTitle.h2}>{texto}</h2>;
+const GreenTitle = ({ text }) => {
+    return <h2 className={sGreenTitle.h2}>{text}</h2>;
 }
 
 GreenTitle.propTypes = {
