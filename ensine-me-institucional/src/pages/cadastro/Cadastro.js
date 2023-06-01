@@ -1,11 +1,9 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
-import sMenu from "generalStyle/menu.module.css"
 
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
-import alunoOption from '../../lotties/lottieAlunoOption.json';
-import professorOption from '../../lotties/lottieProfessorOption.json';
+import Logo from '../../components/atoms/logo/logo.jsx'
+
+import { Player } from '@lottiefiles/react-lottie-player';
 
 import sCadastro from "./style/cadastro.module.css"
 
@@ -15,10 +13,7 @@ const Cadastro = () => {
             <div className={sCadastro.page}>
                 <div className={sCadastro.card}>
                     <div className={sCadastro.menuLogoContainer}>
-                        <img src={logoSvg} alt="logotipo" className={[sMenu.menuLogo, sCadastro.menuLogo].join(' ')} />
-                        <Link to="../">
-                            <h2>Ensine.me</h2>
-                        </Link>
+                        <Logo/>
                     </div>
                     <div className={sCadastro.options}>
                         <Link to="/cadastro/professorcad">

@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 
 import sLinkHref from './linkHref.module.css'
+import SimpleText from '../simpleText/simpleText';
 
-const LinkHref = ({ link, text }) => {
+const LinkHref = ({ link, text, size }) => {
     return (
-        <a className={sLinkHref.a} href={link}>{text}</a>
+        <a className={sLinkHref.a} href={link}><SimpleText text={text} size={size}/></a>
     )
 }
 
-LinkHref.PropTypes= {
-    texto: PropTypes.string.isRequired
+LinkHref.propTypes= {
+    path: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 }
 
 export default LinkHref;

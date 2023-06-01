@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 
 import sBlackTitle from './blackTitle.module.css'
 
-const WhiteTitle = ({ text }) => {
-    return <h2 className={sBlackTitle.h2}>{text}</h2>;
+const Title = ({ text, color }) => {
+    const textStyle = {
+        color: color
+    };
+
+    return <h2 style={textStyle} className={sBlackTitle.h2}>{text}</h2>;
 }
 
-WhiteTitle.propTypes = {
+Title.propTypes = {
     texto: PropTypes.string.isRequired
 }
 
-export default WhiteTitle;
+export default Title;
