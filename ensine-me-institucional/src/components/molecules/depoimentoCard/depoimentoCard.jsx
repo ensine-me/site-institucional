@@ -8,16 +8,16 @@ import PropTypes from 'prop-types';
 const DepoimentoCard = ({ txtDepoimento, txtNome, imgSrc, txtTipoUsuario }) => {
     return (
         <div className={sDepoimentoCard.depoimentoCardContainer}>
-            <div className={sDepoimentoCard}>
+            <div className={sDepoimentoCard.card}>
                 <Title text={txtNome} />
-                <div className={sDepoimentoCard.imgAndText}>
+                <div className={sDepoimentoCard.userInfo}>
                     <img src={imgSrc} alt={"Foto do depoimentista"} className={sDepoimentoCard.img} />
-                    <p className={sDepoimentoCard.depoimentoCardTexto}>
-                        <SimpleText text={txtDepoimento} color={'black'} />
-                    </p>
+                    <Title text={txtTipoUsuario} />
                 </div>
+                <p className={sDepoimentoCard.depoimentoCardTexto}>
+                    <SimpleText text={txtDepoimento} color={'black'} />
+                </p>
             </div>
-            <Title text={txtTipoUsuario} />
         </div>
     )
 }

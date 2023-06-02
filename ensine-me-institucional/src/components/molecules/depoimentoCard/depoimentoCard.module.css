@@ -14,8 +14,9 @@
     border-radius: 10px;
 }
 
-.imgAndText {
+.userinfo {
     display: flex;
+    flex-direction: column;
 }
 
 .imgAndText p {
