@@ -24,8 +24,13 @@
     text-decoration: none;
 }
 
+.linkHome a h2 {
+    color: var(--verde-logo);
+
+}
+
 .linkHome :hover {
-    color: var(--preto);
+    color: var(--verde-claro);
 }
 
 

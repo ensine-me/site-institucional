@@ -1,10 +1,4 @@
 @import 'menu.module.css';
-@import 'header.module.css';
-/* @import '/ensine-me-institucional/src/pages/Home/style/quemSomos.module.css';
-@import '/ensine-me-institucional/src/pages/Home/style/comoFunciona.module.css';
-@import '/ensine-me-institucional/src/pages/Home/style/oQueOferecemos.module.css';
-@import '/ensine-me-institucional/src/pages/Home/style/depoimentos.module.css';
-*/
 @import 'footer.module.css';
 
 @font-face {
@@ -36,7 +30,6 @@ body {
     background-color: var(--cinza-claro);
     font-family: 'Reem Kufi';
     font-size: 16px;
-    font-weight: 400;
     height: 100vh;
 }
 

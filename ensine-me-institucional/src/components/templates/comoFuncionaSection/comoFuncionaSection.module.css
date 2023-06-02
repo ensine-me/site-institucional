@@ -3,16 +3,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5em;
-    width: 50%;
+    align-items: center;
+    width: 100%;
     margin: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
 }
 
 .video {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 40%;
 }
 
 .comoFuncionaTitulo {

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import sLogo from './logo.module.css'
 
-import GreenTitle from '../title/greenTitle/greenTitle.jsx'
+import Title from '../title/title.jsx'
 import LogoSvg from '../../../assets/img/logo/images/svg/icon-modified.svg'
 
 const Logo = () => {
@@ -10,7 +10,7 @@ const Logo = () => {
         <div className={sLogo.linkHome}>
             <Link to="../">
                 <img className={sLogo.img} src={LogoSvg} alt='Logotipo ensine.me' />
-                <GreenTitle text='Ensine.me' />
+                <Title text='Ensine.me' />
             </Link>
         </div>
     </div>

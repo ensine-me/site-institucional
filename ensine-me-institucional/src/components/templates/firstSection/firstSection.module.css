@@ -1,6 +1,6 @@
-header {
+.section {
     height: 80vh;
-    background: url('../assets/img/stock/graduation.jpg'), linear-gradient(180deg, #6FE5FF 0%, rgba(0, 209, 255, 0) 61.46%);
+    background: url('assets/img/stock/graduation.jpg'), linear-gradient(180deg, #6FE5FF 0%, rgba(0, 209, 255, 0) 61.46%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -11,12 +11,4 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-headerh1 {
-    padding-top: 2em;
-}
-
-@media screen and (min-width: 1024px) {
-    
 }
