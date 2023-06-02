@@ -1,0 +1,25 @@
+.depoimentoCardContainer {
+    background-color: var(--verde-logo);
+    padding: 5%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.depoimentoCardTexto span {
+    text-shadow: var(--shadow);
+    width: 100%;
+}
+
+.depoimentoCardContainer img {
+    border-radius: 10px;
+}
+
+.imgAndText {
+    display: flex;
+}
+
+.imgAndText p {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}

@@ -1,8 +1,8 @@
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
 import styles from './style/Login.module.css'
 import googleLogo from 'assets/img/icons/googleLogo.png'
-import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
-import sMenu from "generalStyle/menu.module.css"
+
+import Logo from 'components/atoms/logo/logo';
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
@@ -13,10 +13,7 @@ const Login = () => {
             <div className={styles.page}>
                 <div className={styles.card}>
                     <div className={styles.menuLogoContainer}>
-                        <img src={logoSvg} alt="logotipo" className={styles.menuLogo} />
-                        <Link to="../">
-                            <h2>Ensine.me</h2>
-                        </Link>
+                        <Logo/>
                     </div>
                     <div className={styles.formulario}>
                         <div className={styles.titleLabel}>

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import sUsuariocad from '../style/usuariocad.module.css';
 import sCadastro from "../style/cadastro.module.css"
-import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
-import sMenu from "generalStyle/menu.module.css"
+
+import Logo from 'components/atoms/logo/logo';
 
 import googleLogo from 'assets/img/icons/googleLogo.png'
 
@@ -14,10 +14,7 @@ const Professorcad = () => {
             <div className={sUsuariocad.page}>
                 <div className={sUsuariocad.card}>
                     <div className={[sCadastro.menuLogoContainer, sUsuariocad.me].join(' ')}>
-                        <img src={logoSvg} alt="logotipo" className={[sMenu.menuLogo, sCadastro.menuLogo].join(' ')} />
-                        <Link to="../">
-                            <h2>Ensine.me</h2>
-                        </Link>
+                        <Logo/>
                     </div>
                     <div className={sUsuariocad.formulario}>
                         <p>
