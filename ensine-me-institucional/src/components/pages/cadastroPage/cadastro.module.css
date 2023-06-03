@@ -85,4 +85,12 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    .option {
+        width: 10%;
+    }
+
+    .option:hover {
+        width: 100%;
+    }
 }
