@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const api = axios.get({
+const Api = axios.create({
     baseURL: "localhost:8080/aulas"
 })
 
-export default api;
+export default Api;

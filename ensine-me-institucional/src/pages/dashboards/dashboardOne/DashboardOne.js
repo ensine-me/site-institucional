@@ -2,6 +2,7 @@ import styles from '../style/dash.module.css'
 import { Link } from 'react-router-dom';
 import Chart from './components/Chart'
 
+import Logo from 'components/atoms/logo/logo';
 import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
 import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
 
@@ -68,10 +69,7 @@ const DashOne = () => {
             <div className={styles.page}>
                 <div className={styles.menu}>
                     <div className={styles.menuLogoContainer}>
-                        <img src={logoSvg} alt="logotipo" className={styles.menuLogo} />
-                        <Link to="../">
-                            <h2>Ensine.me</h2>
-                        </Link>
+                        <Logo />
                     </div>
                     <ul className={styles.ulMenuDashOne}>
                         <li className={styles.liMenuDashOne}>Perfil</li>
