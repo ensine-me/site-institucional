@@ -7,10 +7,10 @@ export default class UrlUsuarios {
     async login(dados) {
         const {data} = await api.post(`/login`, dados);
         if (data) {
-            localStorage.setItem('nome', data.nome)
-            localStorage.setItem('email', data.email)
-            localStorage.setItem('id', data.userId)
-            localStorage.setItem('token', data.token)
+            sessionStorage.setItem('nome', data.nome)
+            sessionStorage.setItem('email', data.email)
+            sessionStorage.setItem('id', data.userId)
+            sessionStorage.setItem('token', data.token)
 
             return true
         }
@@ -19,20 +19,20 @@ export default class UrlUsuarios {
     }
 
     usuarioAutenticado() {
-        return localStorage.getItem('token') != undefined ? true : false
+        return sessionStorage.getItem('token') != undefined ? true : false
     }
 
     async logout() {
-        const email = localStorage.getItem('email')
+        const email = sessionStorage.getItem('email')
 
         try{
             const response = await api.delete(`logoff/${email}`)
     
             if (response) {
-                localStorage.removeItem('nome')
-                localStorage.removeItem('email')
-                localStorage.removeItem('id')
-                localStorage.removeItem('token')
+                sessionStorage.removeItem('nome')
+                sessionStorage.removeItem('email')
+                sessionStorage.removeItem('id')
+                sessionStorage.removeItem('token')
 
                 return true;
             }
@@ -40,13 +40,14 @@ export default class UrlUsuarios {
             return false;
 
         }catch(error){
-            alert(error)
+            console.log(error)
         }
 
     }
 
 
     async cadastro(dados) {
+        console.log(dados)
         const { data } = await api.post(`/professor/cadastrar`, dados);
         if (data) {
             return true

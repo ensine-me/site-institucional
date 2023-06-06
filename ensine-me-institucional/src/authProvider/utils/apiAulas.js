@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const api = axios.create({
-    baseURL: " http://localhost:8080/usuarios",
+const apiAulas = axios.create({
+    baseURL: " http://localhost:8080/aulas",
 });
 
 
-api.interceptors.request.use(async (config) => {
+apiAulas.interceptors.request.use(async (config) => {
     try {
         const token = sessionStorage.getItem('token');
         if (token) {
@@ -13,8 +13,8 @@ api.interceptors.request.use(async (config) => {
         }
         return config;
     } catch (error) {
-        console.log("Erro de Interceptor ", error)
+        console.log("ERRo de Interceptor ", error)
     }
 });
 
-export default api;
+export default apiAulas;

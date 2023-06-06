@@ -35,13 +35,12 @@ const Professorcad = () => {
             const response = await apiUsuarios.cadastro(professor)
 
             if (response === true) {
-                alert("usuario cadastrado com sucesso")
                 navigate("/login")
                 //ir para dash
             }
             setLoading(true)
         } catch (error) {
-            alert(error)
+            console.log(error)
         }
     }
 
