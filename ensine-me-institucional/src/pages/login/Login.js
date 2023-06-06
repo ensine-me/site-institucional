@@ -4,7 +4,7 @@ import styles from './style/Login.module.css'
 import googleLogo from 'assets/img/icons/googleLogo.png'
 import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
 
-import {navLink , useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import Logo from 'components/atoms/logo/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
@@ -30,10 +30,10 @@ const Login = () => {
             if (response === true) {
                 alert("usuario logado com sucesso")
                 navigate("/dashboardOne")
-                //ir para dash
             }
             setLoading(true)
         } catch (error) {
+            console.log(error)
             alert(error)
         }
     }
@@ -45,12 +45,6 @@ const Login = () => {
 
     const validarInput = () => {
         return validarEmail(form.email) && validarSenha(form.senha)
-    }
-
-    const Deslogar = async (event) => {
-        event.preventDefault()
-        const response = await apiUsuarios.logout()
-        alert(response)
     }
 
     //alert("form valid ? ", validarInput())
@@ -78,8 +72,8 @@ const Login = () => {
                             Login
                         </button>
                             <div className={styles.googleButtonContainer}>
-                                <div className={styles.googleButton} onClick={Deslogar}>
-                                    <img src={googleLogo}></img>
+                                <div className={styles.googleButton} onClick={HandleSubmit}>
+                                    <img src={googleLogo} />
                                     Login com google
                                 </div>
                             </div>

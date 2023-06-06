@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import sUsuariocad from '../style/usuariocad.module.css';
 import sCadastro from "../style/cadastro.module.css"
-import {navLink , useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import UrlUsuarios from 'authProvider/urlUsuarios';
 
 import Logo from 'components/atoms/logo/logo';

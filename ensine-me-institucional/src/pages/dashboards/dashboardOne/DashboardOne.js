@@ -1,11 +1,14 @@
 import styles from '../style/dash.module.css'
 import { Link } from 'react-router-dom';
 import Chart from './components/Chart'
+import { useNavigate } from 'react-router-dom'
+
 
 import Logo from 'components/atoms/logo/logo';
-import logoSvg from "assets/img/logo/images/svg/icon-modified.svg"
-import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
+import UrlUsuarios from 'authProvider/urlUsuarios';
 
+
+const apiUsuarios = new UrlUsuarios();
 
 //<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 //<div className={sMenu.menu}>
@@ -64,6 +67,27 @@ import depoimento1 from "assets/img/stock/depoimentos/v3_0591770.jpg"
 */
 
 const DashOne = () => {
+
+    const navigate = new useNavigate()
+
+    const Deslogar = async (event) => {
+        event.preventDefault()
+        try{
+            
+            const response = await apiUsuarios.logout()
+    
+            if (response === true) {
+                navigate("/")
+            }
+            console.log("RESPONSE: ", response)
+        }catch(error){
+            console.log("ERRO: ", error)
+        }
+
+
+    }
+
+
     return (
         <>
             <div className={styles.page}>
@@ -77,12 +101,15 @@ const DashOne = () => {
                         <li className={styles.liMenuDashOne}>Agenda</li>
                         <li className={styles.liMenuDashOne}>Finanças</li>
                         <li className={styles.liMenuDashOne}>Analises</li>
+                        <div className={styles.centralizarSair}>
+                            <li className={styles.liSair} onClick={Deslogar}>Sair</li>
+                        </div>
                     </ul>
                 </div>
                 <div className={styles.apresentacaoPerfil}>
-                        <div className={styles.cardPerfil}>
-                            <Chart />
-                        </div>
+                    <div className={styles.cardPerfil}>
+                        <Chart />
+                    </div>
 
 
                 </div>
