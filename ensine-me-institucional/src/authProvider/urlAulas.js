@@ -1,7 +1,17 @@
-import axios from "axios";
+import apiAulas from "./utils/apiAulas";
 
-const Api = axios.create({
-    baseURL: "localhost:8080/aulas"
-})
+export default class UrlAulas {
+    constructor() {
+    }
 
-export default Api;
+    async listarContagem () {
+        const idProfessor = sessionStorage.getItem('id')
+        const {data} = await apiAulas.get(`/contagem/${idProfessor}`)
+        if(data){
+            console.log('data: ', data)
+            return true;
+        }
+        return false
+    }
+
+}
