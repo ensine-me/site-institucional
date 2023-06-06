@@ -34,7 +34,6 @@ const Login = () => {
             setLoading(true)
         } catch (error) {
             console.log(error)
-            alert(error)
         }
     }
 
