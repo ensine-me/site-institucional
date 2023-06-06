@@ -12,11 +12,11 @@ const DepoimentoCard = ({ txtDepoimento, txtNome, imgSrc, txtTipoUsuario }) => {
                 <Title text={txtNome} />
                 <div className={sDepoimentoCard.userInfo}>
                     <img src={imgSrc} alt={"Foto do depoimentista"} className={sDepoimentoCard.img} />
-                    <Title text={txtTipoUsuario} />
+                    <p className={sDepoimentoCard.depoimentoCardTexto}>
+                        <SimpleText text={txtDepoimento} color={'black'} />
+                    </p>
                 </div>
-                <p className={sDepoimentoCard.depoimentoCardTexto}>
-                    <SimpleText text={txtDepoimento} color={'black'} />
-                </p>
+                <Title text={txtTipoUsuario} />
             </div>
         </div>
     )

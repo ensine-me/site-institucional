@@ -1,8 +1,8 @@
 .depoimentoCardContainer {
-    background-color: var(--verde-logo);
+    background-color: rgba(131, 211, 131, 0.733);
     padding: 5%;
-    width: 100%;
     border-radius: 10px;
+    width: 100%;
 }
 
 .depoimentoCardTexto span {
@@ -14,13 +14,14 @@
     border-radius: 10px;
 }
 
-.userinfo {
+.userInfo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    text-align: center;
 }
 
-.imgAndText p {
+.userInfo p {
     display: flex;
     flex-wrap: wrap;
-    padding: 10%;
+    padding: 50px;
 }

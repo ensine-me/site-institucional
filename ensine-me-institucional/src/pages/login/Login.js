@@ -14,8 +14,7 @@ import UrlUsuarios from 'authProvider/urlUsuarios';
 const apiUsuarios = new UrlUsuarios();
 
 const Login = () => {
-
-
+    
     const [loading, setLoading] = useState()
     const [form, setForm] = useState([]);
     const navigate = new useNavigate()
@@ -34,7 +33,6 @@ const Login = () => {
             setLoading(true)
         } catch (error) {
             console.log(error)
-            alert(error)
         }
     }
 
@@ -72,7 +70,7 @@ const Login = () => {
                             Login
                         </button>
                             <div className={styles.googleButtonContainer}>
-                                <div className={styles.googleButton} onClick={HandleSubmit}>
+                                <div className={styles.googleButton} onClick={HandleSubmit} disabled={loading === true || !validarInput()}>
                                     <img src={googleLogo} />
                                     Login com google
                                 </div>

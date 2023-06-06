@@ -1,9 +1,10 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
 
 import sUsuariocad from '../style/usuariocad.module.css';
 import sCadastro from "../style/cadastro.module.css"
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import UrlUsuarios from 'authProvider/urlUsuarios';
 
 import Logo from 'components/atoms/logo/logo';
@@ -18,12 +19,9 @@ const Professorcad = () => {
     const [form, setForm] = useState([]);
     const navigate = new useNavigate()
 
-    
-
     const HandleSubmit = async (event) => {
         event.preventDefault();
-
-        const professor ={
+        const professor = {
             nome: form.nome,
             email: form.email,
             senha: form.senha,
@@ -43,18 +41,21 @@ const Professorcad = () => {
             console.log(error)
         }
     }
-
+    
     const handleChange = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value })
     }
-
+    
+    const validarInput = () => {
+        return validarEmail(form.email) && validarSenha(form.senha)
+    }
 
     return (
         <>
             <div className={sUsuariocad.page}>
                 <div className={sUsuariocad.card}>
                     <div className={[sCadastro.menuLogoContainer, sUsuariocad.me].join(' ')}>
-                        <Logo/>
+                        <Logo />
                     </div>
                     <div className={sUsuariocad.formulario}>
                         <p>
@@ -77,14 +78,14 @@ const Professorcad = () => {
                                 Senha
                             </div>
                         </div>
-                        <input className={sUsuariocad.input} placeholder='*******' type='text' name="senha" onChange={handleChange}></input>
+                        <input className={sUsuariocad.input} placeholder='*******' type='password' name="senha" onChange={handleChange}></input>
                     </div>
                     <div className={sUsuariocad.buttons}>
-                        <div className={sUsuariocad.button} onClick={HandleSubmit} disabled={loading === true}>
+                        <div className={sUsuariocad.button} onClick={HandleSubmit} disabled={loading === true || !validarInput()}>
                             Cadastrar
                         </div>
                         <div className={sUsuariocad.googleButtonContainer} onClick="">
-                            <div className={sUsuariocad.googleButton}>
+                            <div className={sUsuariocad.googleButton} onClick={HandleSubmit} >
                                 <img src={googleLogo}></img>
                                 Cadastrar com o google
                             </div>
