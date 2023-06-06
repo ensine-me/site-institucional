@@ -1,63 +1,56 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from '../../../node_modules/react-router-dom/dist/index';
 import styles from './style/Login.module.css'
 import googleLogo from 'assets/img/icons/googleLogo.png'
 import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
 
+import {navLink , useNavigate} from 'react-router-dom'
+
 import Logo from 'components/atoms/logo/logo';
-import apiUsuarios from 'authProvider/urlUsuarios';
+import UrlUsuarios from 'authProvider/urlUsuarios';
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+const apiUsuarios = new UrlUsuarios();
 
 const Login = () => {
 
+
     const [loading, setLoading] = useState()
-    const [form, setForm] = useState({});
+    const [form, setForm] = useState([]);
+    const navigate = new useNavigate()
 
     const HandleSubmit = async (event) => {
         event.preventDefault();
 
-        const usuario = {
-            email: form.email,
-            senha: form.senha
-        }
-        console.log(usuario)
-
         try {
-            useEffect(() => {
-                 apiUsuarios
-                    .post(`/login`,usuario)
-                    .then((response) => {
-                        console.log("Dento: ", usuario)
-                        console.log(response.data)
-                        localStorage.setItem('email', response.data.email)
-                        localStorage.setItem('senha', response.data.senha)
-                        localStorage.setItem('email', response.data.token)
-                        console.log(localStorage.getItem('email'))
-                    })
-                    .catch((erro) => {
-                        console.log(erro);
-                    });
-            }, []);
-
-
             setLoading(false)
-            alert("deu certo")
+            const response = await apiUsuarios.login(form)
+
+            if (response === true) {
+                alert("usuario logado com sucesso")
+                navigate("/dashboardOne")
+                //ir para dash
+            }
             setLoading(true)
         } catch (error) {
-            alert('error')
+            alert(error)
         }
     }
 
     const handleChange = (event) => {
 
-        console.log("digitando ", event.target.name, event.target.value)
         setForm({ ...form, [event.target.name]: event.target.value })
     }
 
     const validarInput = () => {
         return validarEmail(form.email) && validarSenha(form.senha)
+    }
+
+    const Deslogar = async (event) => {
+        event.preventDefault()
+        const response = await apiUsuarios.logout()
+        alert(response)
     }
 
     //alert("form valid ? ", validarInput())
@@ -84,14 +77,12 @@ const Login = () => {
                         <button className={styles.button} onClick={HandleSubmit} disabled={loading === true || !validarInput()}>
                             Login
                         </button>
-                        <Link to="../dashboardOne">
                             <div className={styles.googleButtonContainer}>
-                                <div className={styles.googleButton}>
+                                <div className={styles.googleButton} onClick={Deslogar}>
                                     <img src={googleLogo}></img>
                                     Login com google
                                 </div>
                             </div>
-                        </Link>
                     </div>
                     <div className={styles.titleLabel2}>
                         Ainda não tem conta?
