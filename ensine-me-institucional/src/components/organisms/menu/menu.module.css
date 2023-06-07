@@ -1,0 +1,67 @@
+.menu {
+    background-color: var(--branco);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.menu li :hover {
+    color: var(--verde-logo);
+}
+
+.menu ul {
+    margin-left: 50px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: none;
+    color: var(--preto);
+}
+
+#iptMenuHamburguer:checked ~ .menuHamburguerOpcoesContainer {
+    display: block;
+}
+
+@media screen and (min-width: 750px) {
+    .menuHamburguerContainer {
+        display: none;
+    }
+
+    .menuOpcoesContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menuOpcoes {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        width: 15%;
+    }
+
+    .buttons a {
+        color: var(--preto);
+        text-decoration: none;
+        font-size: 120%;
+    }
+
+    .iptMenuHamburguer {
+        display: none;
+    }
+}
