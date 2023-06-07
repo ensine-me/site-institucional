@@ -1,27 +1,16 @@
 import apiAulas from '../../../authProvider/urlAulas';
 import { useState } from "react";
 
-
-function Aulas(props) {
-
-  const [listaAulas, setListaAulas] = useState([]);
-
-  useEffect(() => {
-    apiAulas
-      .get(`/contagem/${props.id}`)
-      .then((response) => {
-        setListaAulas(response.data);
-      })
-      .catch((erro) => {
-        console.log(erro);
-      });
-  }, []);
-
-
-  return (
-    null
-
-  )
+export default class Aulas{
+  constructor([{data}]){
+    this.dados=[]
+      for (let index = 0; index < data.length; index++) {
+        this.dados[index]={
+          name: data[index].nome,
+          data: data[index].total
+      }     
+  }
+}
 }
 
 

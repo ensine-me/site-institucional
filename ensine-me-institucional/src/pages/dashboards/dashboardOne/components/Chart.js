@@ -3,11 +3,13 @@ import ApexCharts from "react-apexcharts"
 
 function Chart(props) {
 
+    console.log("PROPSSSSSS ", props.series.dados)
+
     console.log("TESTEEEEEEEE: ", props)
 
     const options = {
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            categories: ['Jun'],
         },
         yaxis: {
             title: {
@@ -16,15 +18,11 @@ function Chart(props) {
         },
         series: [{
             name: 'Matematica',
-            data: [23, 75, 12, 44, 55, 57, 56, 61, 58, 63, 60, 66]
+            data: [9]
         }, {
             name: 'Fisica',
-            data: [43, 54, 64, 76, 85, 101, 98, 87, 105, 91, 114, 94]
-        }, {
-            name: 'Quimica',
-            data: [43, 94, 32, 35, 41, 36, 26, 45, 48, 52, 53, 41]
-        }
-        ],
+            data: [10]
+        }],
         dataLabels: {
             enabled: false
         },

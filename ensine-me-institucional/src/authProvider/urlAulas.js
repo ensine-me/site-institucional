@@ -1,4 +1,7 @@
+import Aulas from "pages/dashboards/professor/Aulas";
 import apiAulas from "./utils/apiAulas";
+
+
 
 export default class UrlAulas {
     constructor() {
@@ -8,9 +11,10 @@ export default class UrlAulas {
         const idProfessor = sessionStorage.getItem('id')
         const {data} = await apiAulas.get(`/contagem/${idProfessor}`)
         if(data){
-            console.log('data: ', data)
+            const aulas = new Aulas([{data}]);
+            console.log('aulas: ', aulas)
             
-            return data;
+            return aulas;
         }
         return null
     }

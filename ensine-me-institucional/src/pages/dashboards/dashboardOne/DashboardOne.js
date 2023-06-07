@@ -8,6 +8,8 @@ import Logo from 'components/atoms/logo/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
 import UrlAulas from 'authProvider/urlAulas';
 import { useState } from 'react';
+import Aulas from '../professor/Aulas';
+import ValidarGrafico from './components/validarChart';
 
 
 const apiUsuarios = new UrlUsuarios();
@@ -67,9 +69,14 @@ const apiAulas = new UrlAulas();
 
                 </div>
 
+
+                <Chart
+                            series = {dadosAulas.dados} />
 */
 
 const DashOne = () => {
+
+    
 
     const navigate = new useNavigate()
     const estiloBlock = {
@@ -80,7 +87,6 @@ const DashOne = () => {
     }
 
     const [dadosAulas, setDadosAulas] = useState([])
-    var series = []
     const [analises, setAnalises] = useState(false)
     const [perfil, setperfil] = useState(true)
     const [aulas, setaulas] = useState(false)
@@ -98,28 +104,22 @@ const DashOne = () => {
         setaulas(true)
     }
 
-    const contagemAulas = async (event) => {
-        event.preventDefault()
+    const minhasAnalises = () => {
+        console.log("DADOS DA AULA: ", dadosAulas )
 
         setAnalises(true)
         setperfil(false)
         setaulas(false)
+    }
+    const contagemAulas = async (event) => {
+        event.preventDefault()
 
         const data = await apiAulas.listarContagem();
-
+        setDadosAulas( data)
         if (data) {
+            console.log("DADOS DA AULA: ", dadosAulas )
             alert("tem valor")
-            for(var i = 0; i < data.length; i++){
-                setDadosAulas([...dadosAulas,{...dadosAulas[i], name: data[i].nome, data: data[i].total }])
-                console.log("DADOS AULA: ", dadosAulas)
-                series.push({
-                name: data[i].nome,
-                data: data[i].total
-               })
-            }
-            
-
-            console.log("series: ", series)
+            console.log("DADOS AULA: ", dadosAulas)
 
         } else {
             alert("Não tem valor")
@@ -128,8 +128,6 @@ const DashOne = () => {
 
     }
 
-    const testando = [series];
-    console.log("TESTANDOOO: ", testando)
     const Deslogar = async (event) => {
         event.preventDefault()
         try {
@@ -150,7 +148,7 @@ const DashOne = () => {
 
     return (
         <>
-            <div className={styles.page}>
+            <div className={styles.page} onLoad={contagemAulas}>
                 <div className={styles.menu}>
                     <div className={styles.menuLogoContainer}>
                         <Logo />
@@ -160,7 +158,7 @@ const DashOne = () => {
                         <li className={styles.liMenuDashOne} onClick={minhasAulas}>Minhas Aulas</li>
                         <li className={styles.liMenuDashOne}>Agenda</li>
                         <li className={styles.liMenuDashOne} >Finanças</li>
-                        <li className={styles.liMenuDashOne} onClick={contagemAulas}>Analises</li>
+                        <li className={styles.liMenuDashOne} onClick={minhasAnalises}>Analises</li>
                         <div className={styles.centralizarSair}>
                             <li className={styles.liSair} onClick={Deslogar}>Sair</li>
                         </div>
@@ -212,8 +210,7 @@ const DashOne = () => {
                     </div>
 
                     <div className={styles.cardPerfil} name="grafico" style={analises == true ? estiloBlock : estiloNone}>
-                        <Chart
-                            series = {testando} />
+                    <ValidarGrafico dados = {dadosAulas} />
                     </div>
                 </div>
             </div>
