@@ -71,8 +71,8 @@ const apiAulas = new UrlAulas();
 
 
                 <Chart
-                            series = {dadosAulas.dados} />
-*/
+                series = {dadosAulas.dados} />
+                */
 
 const DashOne = () => {
 
@@ -120,18 +120,6 @@ const DashOne = () => {
             console.log("DADOS DA AULA: ", dadosAulas )
             alert("tem valor")
             console.log("DADOS AULA: ", dadosAulas)
-
-            for (var i = 0; i < data.length; i++) {
-                setDadosAulas([...dadosAulas, { ...dadosAulas[i], name: data[i].nome, data: data[i].total }])
-                console.log("DADOS AULA: ", dadosAulas)
-                series.push({
-                    name: data[i].nome,
-                    data: data[i].total
-                })
-            }
-
-
-            console.log("series: ", series)
 
         } else {
             alert("Não tem valor")
