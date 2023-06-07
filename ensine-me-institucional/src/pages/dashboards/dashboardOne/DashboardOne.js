@@ -80,7 +80,7 @@ const DashOne = () => {
 
     const navigate = new useNavigate()
     const estiloBlock = {
-        display: 'block',
+        display: 'flex',
     }
     const estiloNone = {
         display: 'none',
@@ -121,6 +121,18 @@ const DashOne = () => {
             alert("tem valor")
             console.log("DADOS AULA: ", dadosAulas)
 
+            for (var i = 0; i < data.length; i++) {
+                setDadosAulas([...dadosAulas, { ...dadosAulas[i], name: data[i].nome, data: data[i].total }])
+                console.log("DADOS AULA: ", dadosAulas)
+                series.push({
+                    name: data[i].nome,
+                    data: data[i].total
+                })
+            }
+
+
+            console.log("series: ", series)
+
         } else {
             alert("Não tem valor")
         }
@@ -160,7 +172,7 @@ const DashOne = () => {
                         <li className={styles.liMenuDashOne} >Finanças</li>
                         <li className={styles.liMenuDashOne} onClick={minhasAnalises}>Analises</li>
                         <div className={styles.centralizarSair}>
-                            <li className={styles.liSair} onClick={Deslogar}>Sair</li>
+                            <a className={styles.liSair} onClick={Deslogar}>Sair</a>
                         </div>
                     </ul>
                 </div>
@@ -185,16 +197,15 @@ const DashOne = () => {
                                 <li className={styles.liMenuDashOne}>(11) 93453-3429</li>
                             </ul>
                         </div>
-                        <div className={styles.cardDescricao}>
+                        {/*<div className={styles.cardDescricao}>
                             <div className={styles.lousa}>
                                 <div className={styles.alinhamento}>
                                     <h1 className={styles.h1Descricao}>Descrição</h1>
                                 </div>
-                                <div className={styles.descProfessor}>Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
-                                    Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. Aenean feugiat ex eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus, porttitor eu mauris a, blandit ultrices nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla varius volutpat turpis sed lacinia nastirus saviata naravia matiria querovax.
+                                <div className={styles.descProfessor}>Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
                                 </div>
                             </div>
-                        </div>
+    </div>*/}
                     </div>
 
                     <div className={styles.cards} style={aulas == true ? estiloBlock : estiloNone} >
