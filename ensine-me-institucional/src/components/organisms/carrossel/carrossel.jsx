@@ -10,7 +10,7 @@ const Carrossel = ({ cards }) => {
         <div className={sCarrossel.carrosselContainer}>
             <Carousel>
                 {cards.map((card, index) => (
-                    <Carousel.Item interval={100000} key={index}>
+                    <Carousel.Item interval={4000} key={index}>
                         {card}
                     </Carousel.Item>
                 ))}

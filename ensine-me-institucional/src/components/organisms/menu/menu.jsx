@@ -17,7 +17,6 @@ const Menu = () => {
             <div className={sMenu.buttons}>
                     <Button path={'./login'} text='Login' />
                     <Button path={'./cadastro'} text='Cadastro' />
-
             </div>
         </div>
     )

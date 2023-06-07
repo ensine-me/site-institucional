@@ -29,3 +29,18 @@
         font-size: 1.7em;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .quemSomos h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .quemSomos p {
+        display: flex;
+        text-align: justify;
+        font-size: 1.0em;
+        padding: 10%;
+    }
+    
+}

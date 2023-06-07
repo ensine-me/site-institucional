@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     box-shadow: var(--shadow);
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .menu li :hover {
@@ -19,40 +19,23 @@
 .buttons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.buttons {
-    display: none;
-    color: var(--preto);
-}
-
-#iptMenuHamburguer:checked ~ .menuHamburguerOpcoesContainer {
-    display: block;
+    justify-content: space-evenly;
+    width: 40%;
 }
 
 @media screen and (min-width: 750px) {
-    .menuHamburguerContainer {
-        display: none;
+    .menu {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
-    .menuOpcoesContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 0;
-    }
-
-    .menuOpcoes {
-        display: flex;
-        justify-content: space-between;
+    .menu img {
+        margin-left: 25px;
     }
 
     .buttons {
         display: flex;
-        justify-content: space-evenly;
-        width: 15%;
+        align-items: center;
     }
 
     .buttons a {
@@ -60,8 +43,29 @@
         text-decoration: none;
         font-size: 120%;
     }
+}
 
-    .iptMenuHamburguer {
+@media screen and (max-width: 1090px) {
+    .menu ul {
         display: none;
+    }
+
+    .menu {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .menu img {
+        display: none;
+    }
+
+    .buttons {
+        width: 50%;
     }
 }
