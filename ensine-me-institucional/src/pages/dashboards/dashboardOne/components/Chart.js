@@ -1,7 +1,9 @@
 import ApexCharts from "react-apexcharts"
 
 
-function Chart() {
+function Chart(props) {
+
+    console.log("TESTEEEEEEEE: ", props)
 
     const options = {
         xaxis: {

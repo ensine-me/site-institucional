@@ -9,9 +9,10 @@ export default class UrlAulas {
         const {data} = await apiAulas.get(`/contagem/${idProfessor}`)
         if(data){
             console.log('data: ', data)
-            return true;
+            
+            return data;
         }
-        return false
+        return null
     }
 
 }
