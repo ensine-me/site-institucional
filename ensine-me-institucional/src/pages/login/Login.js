@@ -8,6 +8,8 @@ import {useNavigate} from 'react-router-dom'
 
 import Logo from 'components/atoms/logo/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
+import {useSession, useSupaBaseClient} from '@supabase/auth-helpers-react';
+
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
@@ -15,6 +17,26 @@ const apiUsuarios = new UrlUsuarios();
 
 const Login = () => {
     
+    const session = useSession();
+    const supabase = useSupaBaseClient();
+
+    async function googleSignIn(){
+        const {error} = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                scopes: 'https://www.googleapis.com/auth/calendar'
+            }
+        });
+        if(error){
+            alert("Error logging in to google and supabase not working");
+            console.log(error);
+        }
+    }
+
+    async function signOut(){
+        await supabase.auth.signOut();
+    } // parei nessa parte 14:11
+
     const [loading, setLoading] = useState()
     const [form, setForm] = useState([]);
     const navigate = new useNavigate()
@@ -69,7 +91,7 @@ const Login = () => {
                             Login
                         </button>
                             <div className={styles.googleButtonContainer}>
-                                <div className={styles.googleButton} onClick={HandleSubmit} disabled={loading === true || !validarInput()}>
+                                <div className={styles.googleButton} onClick={() => googleSignIn()} disabled={loading === true || !validarInput()}>
                                     <img src={googleLogo} />
                                     Login com google
                                 </div>
