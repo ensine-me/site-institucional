@@ -8,8 +8,8 @@ import {useNavigate} from 'react-router-dom'
 
 import Logo from 'components/atoms/logo/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
-import {useSession, useSupaBaseClient} from '@supabase/auth-helpers-react';
-
+import { useSession } from '../../../node_modules/@supabase/auth-helpers-react/dist/index'; 
+import { useSupabaseClient } from '../../../node_modules/@supabase/auth-helpers-react/dist/index';
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
@@ -18,7 +18,7 @@ const apiUsuarios = new UrlUsuarios();
 const Login = () => {
     
     const session = useSession();
-    const supabase = useSupaBaseClient();
+    const supabase = useSupabaseClient();
 
     async function googleSignIn(){
         const {error} = await supabase.auth.signInWithOAuth({
