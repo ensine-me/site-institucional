@@ -19,7 +19,10 @@ const Professorcad = () => {
     const [form, setForm] = useState([]);
     const navigate = new useNavigate()
 
-    const HandleSubmit = async (event) => {
+    const HandleSubmit = async () => {
+        window.location.href = "http://localhost:3001"
+        
+        /*
         event.preventDefault();
         const professor = {
             nome: form.nome,
@@ -39,7 +42,8 @@ const Professorcad = () => {
             setLoading(true)
         } catch (error) {
             console.log(error)
-        }
+        } 
+        */
     }
     
     const handleChange = (event) => {

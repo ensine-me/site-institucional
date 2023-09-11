@@ -20,6 +20,9 @@ const Login = () => {
     const navigate = new useNavigate()
 
     const HandleSubmit = async (event) => {
+        window.location.href = "http://localhost:3001"
+
+        /*
         event.preventDefault();
 
         try {
@@ -34,6 +37,7 @@ const Login = () => {
         } catch (error) {
             console.log(error)
         }
+        */
     }
 
     const handleChange = (event) => {
@@ -69,7 +73,7 @@ const Login = () => {
                             Login
                         </button>
                             <div className={styles.googleButtonContainer}>
-                                <div className={styles.googleButton} onClick={HandleSubmit} disabled={loading === true || !validarInput()}>
+                                <div className={styles.googleButton} onClick={HandleSubmit}>
                                     <img src={googleLogo} />
                                     Login com google
                                 </div>
