@@ -20,7 +20,7 @@ const Login = () => {
     const navigate = new useNavigate()
 
     const HandleSubmit = async (event) => {
-        window.location.href = "http://localhost:3001"
+        window.location.href = "http://localhost:3000"
 
         /*
         event.preventDefault();

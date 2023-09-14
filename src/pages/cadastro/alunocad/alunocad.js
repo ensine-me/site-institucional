@@ -8,6 +8,10 @@ import Logo from 'components/atoms/logo/logo';
 
 import googleLogo from 'assets/img/icons/googleLogo.png'
 
+const HandleSubmit = async () => {
+    window.location.href = "http://localhost:3000"
+}
+
 const Alunocad = () => {
     return (
         <>
@@ -43,7 +47,7 @@ const Alunocad = () => {
                         <div className={sUsuariocad.button} onClick="">
                             Cadastrar
                         </div>
-                        <div className={sUsuariocad.googleButtonContainer} onClick="">
+                        <div onClick={HandleSubmit} className={sUsuariocad.googleButtonContainer}>
                             <div className={sUsuariocad.googleButton}>
                                 <img src={googleLogo}></img>
                                 Cadastrar com o google
