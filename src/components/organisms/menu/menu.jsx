@@ -4,6 +4,13 @@ import Logo from '../../atoms/logo/logo.jsx'
 import sMenu from './menu.module.css';
 import Button from "components/molecules/button/button.jsx";
 
+import styles from '../../../pages/login/style/Login.module.css'
+import googleLogo from 'assets/img/icons/googleLogo.png'
+
+const HandleSubmit = async (event) => {
+    window.location.href = "http://localhost:3000"
+}
+
 const Menu = () => {
     return (
         <div className={sMenu.menu}>
@@ -15,8 +22,13 @@ const Menu = () => {
                 { text: 'Depoimentos', link: '#depoimentos', size: 'large' }]}
             />
             <div className={sMenu.buttons}>
-                    <Button path={'./login'} text='Login' />
-                    <Button path={'./cadastro'} text='Cadastro' />
+                <div className={styles.googleButtonContainer}>
+                    <div className={styles.googleButton} onClick={HandleSubmit}>
+                        <img src={googleLogo} />
+                        Login com google
+                    </div>
+                </div>
+
             </div>
         </div>
     )
