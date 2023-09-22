@@ -6,7 +6,7 @@ import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
 
 import {useNavigate} from 'react-router-dom'
 
-import Logo from 'components/atoms/logo/logo';
+import Logo from 'components/atoms/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

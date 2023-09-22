@@ -1,4 +1,4 @@
-import PaginaInicial from "components/pages/homePage/paginaInicial";
+import PaginaInicial from "components/pages/paginaInicial";
 
 const Home = () => {
 

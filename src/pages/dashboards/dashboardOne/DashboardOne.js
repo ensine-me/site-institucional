@@ -4,7 +4,7 @@ import Chart from './components/Chart'
 import { useNavigate } from 'react-router-dom'
 
 
-import Logo from 'components/atoms/logo/logo';
+import Logo from 'components/atoms/logo';
 import UrlUsuarios from 'authProvider/urlUsuarios';
 import UrlAulas from 'authProvider/urlAulas';
 import { useState } from 'react';

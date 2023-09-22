@@ -2,9 +2,9 @@ import React from "react";
 import Login from 'pages/login/Login';
 import DashOne from "pages/dashboards/dashboardOne/DashboardOne";
 import Home from "pages/Home/Home";
-import Cadastro from "pages/cadastro/Cadastro";
-import CadastroAluno from "pages/cadastro/alunocad/alunocad"
-import CadastroProfessor from "pages/cadastro/professorcad/professorcad"
+import Cadastro from "pages/Cadastro";
+import CadastroAluno from "pages/alunocad"
+import CadastroProfessor from "pages/professorcad"
 import ProtectedRoutes from "routes/protectedRoutes";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
