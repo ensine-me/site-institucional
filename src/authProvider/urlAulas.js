@@ -1,5 +1,5 @@
-import Aulas from "pages/dashboards/professor/Aulas";
-import apiAulas from "./utils/apiAulas";
+import Aulas from "components/Aulas";
+import apiAulas from "./apiAulas";
 
 
 

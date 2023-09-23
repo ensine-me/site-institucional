@@ -1,8 +1,8 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
 
-import sUsuariocad from '../assets/style/usuariocad.module.css';
-import sCadastro from "../style/cadastro.module.css"
+import sUsuariocad from '../assets/styles/cadastroUsuario.module.css';
+import sCadastro from "../assets/styles/cadastro.module.css"
 
 import Logo from 'components/atoms/logo';
 

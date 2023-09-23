@@ -1,9 +1,9 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
+import { validarEmail, validarSenha } from 'authProvider/validadores';
 
-import sUsuariocad from '../style/usuariocad.module.css';
-import sCadastro from "../style/cadastro.module.css"
+import sUsuariocad from '../assets/styles/cadastroUsuario.module.css';
+import sCadastro from "../assets/styles/cadastro.module.css"
 import { useNavigate } from 'react-router-dom'
 import UrlUsuarios from 'authProvider/urlUsuarios';
 

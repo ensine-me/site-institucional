@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Link } from '../../../node_modules/react-router-dom/dist/index';
-import styles from './style/Login.module.css'
+import { Link } from '../../node_modules/react-router-dom/dist/index';
+import styles from '../assets/styles/login.module.css'
 import googleLogo from 'assets/img/icons/googleLogo.png'
-import { validarEmail, validarSenha } from 'authProvider/utils/validadores';
+import { validarEmail, validarSenha } from 'authProvider/validadores';
 
 import {useNavigate} from 'react-router-dom'
 

@@ -3,7 +3,7 @@ import Logo from '../atoms/logo.jsx'
 
 import sMenu from '../../assets/styles/organisms/menu.module.css';
 
-import styles from '../../pages/login/style/Login.module.css'
+import styles from '../../assets/styles/login.module.css'
 import googleLogo from 'assets/img/icons/googleLogo.png'
 
 const HandleSubmit = async (event) => {
